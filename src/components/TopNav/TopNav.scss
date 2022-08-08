@@ -1,0 +1,25 @@
+$flex: flex;
+
+// colors
+$red: #f00;
+$black: #030303;
+$light-gray:#0000000D;
+$light-green:#deffde;
+
+
+.top-nav{
+    margin: 20px;
+    ul {
+        display: $flex;
+        align-items: center;
+    .logo {
+        width: 120px;
+    }
+    li{
+        font-size: 28px;
+        padding: 5px;
+        flex: auto;
+    }
+}
+}
+
