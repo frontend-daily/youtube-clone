@@ -1,0 +1,35 @@
+
+$light-gray:#c5cccedc;
+
+.search {
+    display: flex;
+    align-items: center;
+    .search-icon {
+        display: inline;
+        position: absolute;
+        margin-right: -20px;
+        // width: 120px;
+        font-size: 16px;
+        padding-left: 2px;
+        padding-right: 20px;
+    }
+    form {
+        display: flex;
+        align-items: center;
+    }
+    input {
+        height: 15px;
+        padding: 18px;
+        border: 1px solid $light-gray;
+    }
+
+    button {
+        border: 1px solid $light-gray;
+        padding: 10px 15px;
+
+    }
+}
+
+.flex-item {
+    padding: 12px ;
+}
