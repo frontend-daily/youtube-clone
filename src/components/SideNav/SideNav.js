@@ -12,45 +12,65 @@ const SideNav = ({open, setOpenNav}) => {
       <div onClick={()=>setOpenNav(false)}><AiOutlineMenu /></div>
       <div><img src={youtube} alt="youtube"/></div>
       </div>
-        <ul>
-        <li><AiFillHome />Home</li>
-        <li><MdOutlineExplore/>Explore</li>
-        <li><MdSlowMotionVideo/>Shorts</li>
-        <li><MdOutlineSubscriptions />Suscriptions</li>
-        </ul>
-        <ul>
-        <li><MdOutlineVideoLibrary/>Library</li>
-        <li><VscHistory />History</li>
-        <li><RiVideoLine />Your Videos</li>
-        </ul>
-        <ul>
-          <li>SUBSCRIPTIONS</li>
-        <li>JavaScript Mastery</li>
-        <li>Dev Ed</li>
-        <li>CS50</li>
-        </ul>
-        <ul>
-        <li>Explore</li>
-        <li>Movies</li>
-        <li>Gaming</li>
-        <li>Sports</li>
-        </ul>
-        <ul>
-        <li>MORE FROM YOUTUBE  </li>
-        <li>Creator Studio</li>
-        <li>Youtube Music</li>
-        <li>Youtube Kids</li>
-        
-        </ul>
+        <div>
+          <ul>
+            <li><a href='#'><AiFillHome />Home</a></li>
+            <li><a href='#'><MdOutlineExplore/>Explore</a></li>
+            <li><a href='#'><MdSlowMotionVideo/>Shorts</a></li>
+            <li><a href='#'><MdOutlineSubscriptions />Suscriptions</a></li>
+          </ul>
 
-        <ul>
-        <li>Settings </li>
-        <li>report History</li>
-        <li>Help</li>
-        <li>Send Feedback</li>
+        </div>
+        <div>
+          <ul>
+            <li><a href='#'><MdOutlineVideoLibrary/>Library</a></li>
+            <li><a href='#'><VscHistory />History </a></li>
+            <li><a href='#'><RiVideoLine />Your Videos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span>SUBSCRIPTIONS</span>
+          <ul>  
+            <li><a href='#'>JavaScript Mastery</a></li>
+            <li><a href='#'>Dev Ed</a></li>
+            <li><a href='#'>CS50</a></li>
+          </ul>
+        </div>
         
-        </ul>
-        <p></p>
+        <div>
+          <ul>
+            <li><a href='#'>Explore</a></li>
+            <li><a href='#'>Movies</a></li>
+            <li><a href='#'>Gaming</a></li>
+            <li><a href='#'> Sports</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <span>MORE FROM YOUTUBE </span>
+          <ul>
+            <li><a href='#'>Creator Studio</a></li>
+            <li><a href='#'>Youtube Music</a></li>
+            <li><a href="#">Youtube Kids</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li><a href='#'>Settings</a></li>
+            <li><a href='#'>Report History</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href='#'>Send Feedback</a></li>
+          </ul>
+        </div>
+        <div>
+          <div>
+            <a href='#'>
+
+            </a>
+          </div>
+        </div>
     </nav>
   )
 }
