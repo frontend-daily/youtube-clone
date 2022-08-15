@@ -6,12 +6,12 @@ import {IoMdNotificationsOutline} from 'react-icons/io'
 import {FaUserCircle} from 'react-icons/fa'
 import "./TopNav.scss"
 import Search from '../search/Search'
-
-
+import { AiOutlineMenu } from 'react-icons/ai'
+import SideNav from '../SideNav/SideNav'
 
 const TopNav = () => {
-  const [showSearch, setShowSearch] = useState(true)
-
+  const [showSearch, setShowSearch] = useState(false)
+  const [openNav, setOpenNav] = useState(false)
   const handleOpenSearch = () => {
     setShowSearch(true)
   }
@@ -23,8 +23,11 @@ const TopNav = () => {
   return (
       showSearch ? 
       <Search show={showSearch} handleClose={handleCloseSearch} /> :
+     <div>
+      {openNav ? <SideNav setOpenNav={setOpenNav}/> : null}
       <nav className='top-nav'>  
       <ul>
+        <li><AiOutlineMenu onClick={()=> setOpenNav(true)} /></li>
         <li><img className='logo' src={youtube} alt="youtube icon"/></li>
         <li onClick={handleOpenSearch}><AiOutlineSearch/></li>
         <li><BiMicrophone/></li>
@@ -33,6 +36,7 @@ const TopNav = () => {
         <li><FaUserCircle/></li>
       </ul>
       </nav>
+     </div>
    
    
   )

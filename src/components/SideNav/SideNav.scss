@@ -1,0 +1,35 @@
+.mob-side-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    border-right: #e6e6e6 1px solid;
+    background: #fff;
+    z-index: 9999;
+    // overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+
+   
+
+.mob-menu-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e6e6e6;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
