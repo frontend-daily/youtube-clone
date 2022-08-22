@@ -3,17 +3,23 @@ import { AiOutlineMenu, AiOutlineHome } from 'react-icons/ai'
 import youtube from '../../assets/youtube.svg'
 import {MdSlowMotionVideo, MdOutlineSubscriptions, MdOutlineExplore, MdOutlineVideoLibrary} from 'react-icons/md'
 import {VscHistory} from 'react-icons/vsc'
+import {GiFilmStrip} from 'react-icons/gi'
 import {GrHomeRounded} from 'react-icons/gr'
+import {SiYoutubegaming} from 'react-icons/si'
 import {RiVideoLine} from 'react-icons/ri'
 import './SideNav.scss'
+import user from "../../assets/user.png"
+
+
+
 const SideNav = ({open, setOpenNav}) => {
   return (
-    <nav className='mob-side-menu' >
+    <nav className={`mob-side-menu ${open ? 'open-nav':''} ` } id={`$`} >
       <div className='mob-menu-header'>
       <div onClick={()=>setOpenNav(false)}><AiOutlineMenu /></div>
       <div><img src={youtube} alt="youtube"/></div>
       </div>
-        <div>
+        <div  className="sidebar-contianer">
           <ul>
             <li>
               <a href='#'>
@@ -42,7 +48,7 @@ const SideNav = ({open, setOpenNav}) => {
           </ul>
 
         </div>
-        <div>
+        <div  className="sidebar-contianer">
           <ul>
             <li>
               <a href='#'>
@@ -65,42 +71,50 @@ const SideNav = ({open, setOpenNav}) => {
           </ul>
         </div>
 
-        <div>
-          <span>SUBSCRIPTIONS</span>
+        <div className="sidebar-contianer">
+          <span className='sidebar-title'>SUBSCRIPTIONS</span>
           <ul>  
             <li>
               <a href='#'>
-               <span className='icon'></span>
+               <span className='text-icon'>
+                 <img src={user} alt='user' />
+                </span>
                <span className='text'>JavaScript Mastery</span>
               </a>
             </li>
             <li>
               <a href='#'>
-               <span className='icon'></span>
+              <span className='text-icon'>
+                 <img src={user} alt='user' />
+                </span>
                <span className='text'>Dev Ed</span>
               </a>
             </li>
             <li>
               <a href='#'>
-               <span className='icon'></span>
+                <span className='text-icon'>
+                 <img src={user} alt='user' />
+                </span>
                <span className='text'>CS50</span>
               </a>
             </li>
           </ul>
         </div>
         
-        <div>
-        <span>Explore</span>
+        <div  className="sidebar-contianer">
+        <span className='sidebar-title'>Explore</span>
           <ul>
             <li>
               <a href='#'>
-               <span className='icon'></span>
+               <span className='icon'><GiFilmStrip/></span>
                <span className='text'>Movies</span>
               </a>
             </li>
             <li>
               <a href='#'>
-               <span className='icon'></span>
+               <span className='icon'>
+                <SiYoutubegaming/>
+               </span>
                <span className='text'>Gaming</span>
               </a>
             </li>
@@ -113,8 +127,8 @@ const SideNav = ({open, setOpenNav}) => {
           </ul>
         </div>
         
-        <div>
-          <span>MORE FROM YOUTUBE </span>
+        <div  className="sidebar-contianer">
+          <span className='sidebar-title'>MORE FROM YOUTUBE </span>
           <ul>
             <li>
               <a href='#'>
@@ -138,7 +152,7 @@ const SideNav = ({open, setOpenNav}) => {
           </ul>
         </div>
 
-        <div>
+        <div  className="sidebar-contianer">
           <ul>
             <li>
               <a href='#'>
@@ -166,13 +180,71 @@ const SideNav = ({open, setOpenNav}) => {
             </li>
           </ul>
         </div>
-        <div>
-          <div>
+        <div className='links-container'>
+          <div className='link-row'>
             <a href='#'>
-
+                About
+            </a>
+            <a href='#'>
+                Press
+            </a>
+            <a href='#'>
+                Copyright
+            </a>
+          </div>
+          <div className='link-row'>
+            <a href='#'>
+                Contact us
+            </a>
+            <a href='#'>
+                Creators
+            </a>
+          </div>
+          <div className='link-row'>
+            <a href='#'>
+                Advertise
+            </a>
+            <a href='#'>
+                Developers
             </a>
           </div>
         </div>
+
+        <div className='links-container'>
+          <div className='link-row'>
+            <a href='#'>
+                About
+            </a>
+            <a href='#'>
+                Press
+            </a>
+            <a href='#'>
+                Copyright
+            </a>
+          </div>
+          <div className='link-row'>
+            <a href='#'>
+                Contact us
+            </a>
+            <a href='#'>
+                Creators
+            </a>
+          </div>
+          <div className='link-row'>
+            <a href='#'>
+                Advertise
+            </a>
+            <a href='#'>
+                Developers
+            </a>
+          </div>
+        </div>
+
+        <div className='links-container'>
+          <span className='copyright'>© 2022 Google LLC</span>
+        </div>
+
+        
     </nav>
   )
 }
