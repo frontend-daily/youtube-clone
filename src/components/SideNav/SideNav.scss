@@ -1,17 +1,26 @@
 $gray-color:rgb(238, 238, 238);
 $text-color:#030303;
 
+.sidebar-wrapper {
+  // width: 100vw;
+  background: #606060;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.sidebar-logo-wrapper {
+  display:none;
+}
 
 .mob-side-menu {
     display: block;
-    position: fixed;
     top: 0;
     left: 0;
     width: 240px;
     height: 100%;
     background: #fff;
     z-index: 9999;
-    overflow-y: hidden;
+   
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -48,7 +57,7 @@ $text-color:#030303;
 
     }
 }
-#side-overlay {
+.open-nav {
   position: fixed;
   background: #909090;
   width: 100vh;
@@ -56,20 +65,16 @@ $text-color:#030303;
   display: block;
 }
 
-.open-nav #side-overlay {
-  display: block;
-}
+// .open-nav #side-overlay {
+//   display: block;
+// }
   
-
-
-
 
 .mob-side-menu:hover {
   overflow-y: scroll;
 }
 
    
-
 .mob-menu-header {
   display: flex;
   align-items: center;

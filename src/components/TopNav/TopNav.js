@@ -24,7 +24,7 @@ const TopNav = () => {
       showSearch ? 
       <Search show={showSearch} handleClose={handleCloseSearch} /> :
      <div>
-      {openNav ? <SideNav setOpenNav={setOpenNav}/> : null}
+      {/* {openNav ? <SideNav setOpenNav={setOpenNav}/> : null} */}
       <nav className='top-nav'>  
       <ul>
         <li><AiOutlineMenu onClick={()=> setOpenNav(true)} /></li>

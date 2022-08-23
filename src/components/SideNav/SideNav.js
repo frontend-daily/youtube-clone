@@ -10,15 +10,14 @@ import {RiVideoLine} from 'react-icons/ri'
 import './SideNav.scss'
 import user from "../../assets/user.png"
 
-
-
 const SideNav = ({open, setOpenNav}) => {
   return (
-    <nav className={`mob-side-menu ${open ? 'open-nav':''} ` } id={`$`} >
+   <div className='sidebar-wrapper'>
+     <nav className={`mob-side-menu ${open ? 'open-nav':''} ` }  >
       <div className='mob-menu-header'>
-      <div onClick={()=>setOpenNav(false)}><AiOutlineMenu /></div>
+      <div className='sidebar-logo-wrapper'><div onClick={()=>setOpenNav(false)}><AiOutlineMenu /></div>
       <div><img src={youtube} alt="youtube"/></div>
-      </div>
+      </div></div>
         <div  className="sidebar-contianer">
           <ul>
             <li>
@@ -246,6 +245,7 @@ const SideNav = ({open, setOpenNav}) => {
 
         
     </nav>
+   </div>
   )
 }
 
